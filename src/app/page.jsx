@@ -52,7 +52,7 @@ if(loading) {
 }
 
 async function Upload() {
-  const uploadableFile = file[0]
+  const uploadableFile = file? file[0] : null
   setUploading(true)
 if(!uploadableFile) {
   setUploading(false)
