@@ -1,6 +1,6 @@
 
 import { Provider } from "@/providers/provider";
-import './global.css'
+
 
 export const metadata = {
   title: "CDN uploader",
