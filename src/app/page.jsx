@@ -26,7 +26,7 @@ async function Authenticate() {
     setLoggedIn(false)
     setLoading(false)
   }
-  const url = `https://shaheercdn.onrender.com/authorize?key=`+token
+  const url = `https://cdn.shaheerahamed.com/authorize?key=`+token
   const request = await fetch(url, {
     method: 'GET'
   })
@@ -67,7 +67,7 @@ if(!uploadableFile) {
 
 const form = new FormData()
 form.append("image", uploadableFile)
-const url = `https://shaheercdn.onrender.com/upload?key=`+window.localStorage.getItem("token")
+const url = `https://cdn.shaheerahamed.com/upload?key=`+window.localStorage.getItem("token")
 const request = await fetch(url, {
   method: 'POST',
   body: form
@@ -77,7 +77,7 @@ const response = await request.json()
 if(response.success) {
   setUploading(false)
   
-  setImageURL("https://shaheercdn.onrender.com/"+response.url)
+  setImageURL("https://cdn.shaheerahamed.com/"+response.url)
   toast({
     status: 'success',
     isClosable: true,
