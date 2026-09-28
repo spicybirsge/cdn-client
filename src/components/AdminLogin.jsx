@@ -15,7 +15,7 @@ export default function AdminLogin() {
 
   const login = async () => {
     setSubmitting(true)
-    const url = `https://shaheercdn.onrender.com/authorize?key=` + key;
+    const url = `https://cdn.shaheerahamed.com/authorize?key=` + key;
 
     const request = await fetch(url, {
       method: 'GET'
